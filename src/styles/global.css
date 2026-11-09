@@ -270,3 +270,43 @@ body {
 .site-header {
   z-index: 10;
 }
+
+/* REMOVE WHITE BORDERS AROUND THE PAGE */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
+  min-height: 100%;
+  background-color: #101010 !important;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.site-shell {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #101010;
+}
+
+/* Keep the navigation over the hero */
+.site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+/* Ensure the hero starts at the very top */
+.hero {
+  margin-top: 0;
+  border: 0;
+}
