@@ -144,3 +144,54 @@ h2 { font-size: clamp(54px, 8vw, 112px); line-height: .91; margin: 0; }
   .site-footer { flex-wrap: wrap; gap: 20px; }
   .site-footer span:nth-of-type(1) { display: none; }
 }
+
+/* CINEMATIC FULL-SCREEN HERO VIDEO */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.hero-reel {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  display: block;
+  z-index: 0;
+  overflow: hidden;
+  background: #101010;
+}
+
+.hero-reel iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Dark overlay for readable typography */
+.hero-reel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(0, 0, 0, 0.12) 45%,
+    rgba(0, 0, 0, 0.45) 100%
+  );
+  pointer-events: none;
+}
+
+/* Keep all hero content above the video */
+.hero-topline,
+.hero-copy,
+.scroll-note {
+  position: relative;
+  z-index: 2;
+}
