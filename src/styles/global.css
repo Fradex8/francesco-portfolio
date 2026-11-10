@@ -350,12 +350,13 @@ body {
 .about-layout {
   display: grid;
   grid-template-columns: 0.9fr 1.35fr;
-  gap: 12px;
+  gap: 32px;
   align-items: stretch;
   width: 100%;
   max-width: none;
   margin: 0 auto;
 }
+
 
 .about-portrait {
   height: 100%;
