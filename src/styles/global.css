@@ -342,20 +342,23 @@ body {
 
 /* ABOUT — MATCHING THE EDITORIAL REFERENCE */
 
+
 .about-section {
   display: block;
-  padding: 70px 5% 70px;
+  width: 100%;
+  padding: 70px 24px;
 }
 
 .about-layout {
   display: grid;
   grid-template-columns: minmax(0, 0.62fr) minmax(0, 1fr);
-  gap: 12px;
+  gap: 32px;
   width: 100%;
-  max-width: 1600px;
+  max-width: none;
   margin: 0 auto;
   align-items: stretch;
 }
+
 
 .about-portrait {
   width: 100%;
@@ -378,10 +381,12 @@ body {
   min-width: 0;
 }
 
+
 .about-copy {
-  padding: 55px 0 0;
+  padding: 55px 0 0 12px;
   max-width: 650px;
 }
+
 
 .about-copy h2 {
   margin: 0 0 24px;
@@ -444,9 +449,11 @@ body {
 /* MOBILE */
 
 @media (max-width: 768px) {
-  .about-section {
-    padding: 60px 6% 60px;
-  }
+
+.about-section {
+  padding: 60px 18px;
+}
+
 
   .about-layout {
     grid-template-columns: 1fr;
